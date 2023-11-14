@@ -5,6 +5,10 @@
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #343541;
 }
@@ -94,40 +98,80 @@ header h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 auto;
     margin-top: 4rem;
-    bottom: 100px;
-    width: 100%;
-    position: absolute;
+    margin-bottom: 100px;
     width: 60vw;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
-#chat .message {
+#chat .user-message {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    height: 60px;
-    width: 29vw;
-    margin: 0.4rem;
+    height: 100px;
+    width: 100%;
     background-color: #343541;
-    border-radius: 10px;
-    border: 1px solid #5b5d72;
-    box-shadow: 0 0 2px rgb(54, 54, 54);
-    transition: all 0.1s ease-in-out;
+    border-bottom: 0.1px #252525 solid;
+    padding: 0.5rem;
 }
 
-#chat .message a{
+#chat .user-message a {
     display: flex;
+    align-items: center;
     text-align: left;
-    width: 100%;
-    height: 80%;
     text-decoration: none;
     color: #d3d3d3;
-    font-weight: bold;
     font-size: 0.8rem;
-    text-align: left;
     padding: 0.5rem;
+}
 
+#chat .user-message img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    margin-right: 10px;
+    background-color: chocolate;
+}
+
+#chat .bot-message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #60616970;
+    border-bottom: 0.1px #252525 solid;
+    padding: 0.5rem;
+}
+
+#chat .bot-message a {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    color: #d3d3d3;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+#chat .bot-message img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.bottom {
+    background-color: #343541;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .input {
@@ -138,7 +182,7 @@ header h1 {
     height: 3.5rem;
     margin: 0 auto;
     margin-top: 3.9rem;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     left: 0;
     right: 0;
@@ -172,7 +216,7 @@ header h1 {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     margin: 15px auto;

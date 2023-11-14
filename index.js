@@ -5,7 +5,8 @@ function sendMessage() {
 
     if (message != "") {
         document.getElementById("textbox").value = "";
-        document.getElementById("chat").innerHTML += "<div class='message'><a>" + message + "</a></div>";
+        document.getElementById("chat").innerHTML += "<div class='user-message'><img src='user.png'><a>" + message + "</a></div>";
+        document.getElementById("chat").innerHTML += "<div class='bot-message'><img src='bot.png'><a>" + "test" + "</a></div>";
     }
 
     document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
@@ -23,7 +24,7 @@ function checkForTextEntered() {
 }
 
 //listen for enter key
-document.getElementById("textbox").addEventListener("keyup", function(event) {
+document.getElementById("textbox").addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.keyCode == 13) {
         sendMessage();
