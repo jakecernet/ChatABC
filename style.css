@@ -96,7 +96,7 @@ header h1 {
     width: 60vw;
     height: 3.5rem;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 3.9rem;
 }
 
 .input input {
@@ -124,4 +124,15 @@ header h1 {
 
 .input button:hover {
     color: #a0a0a0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343541;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 5px;
 }
