@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+body {
+    background-color: #343541;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+header h1 {
+    color: #5b5d72;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.ideas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    bottom: 100px;
+    width: 100%;
+    position: absolute;
+    width: 60vw;
+}
+
+.ideas ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.ideas ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60px;
+    width: 28vw;
+    margin: 0.8rem;
+    background-color: #343541;
+    border-radius: 10px;
+    border: 1px solid #5b5d72;
+    box-shadow: 0 0 2px rgb(54, 54, 54);
+    transition: all 0.1s ease-in-out;
+}
+
+.ideas ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+.ideas ul li a {
+    display: flex;
+    text-align: left;
+    width: 80%;
+    height: 80%;
+    text-decoration: none;
+    color: #9898a3;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0.2rem;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 2px rgb(54, 54, 54);
+    width: 60vw;
+    height: 3.5rem;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 4rem;
+}
+
+.input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: #40414f;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.input button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #40414f;
+    color: #636262;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.input button:hover {
+    color: #a0a0a0;
+}
