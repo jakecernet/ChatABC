@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <h1>ChatABC</h1>
         <div class="ideas">
             <ul>
@@ -49,13 +49,19 @@
             </ul>
         </div>
     </header>
+    <section class="chat">
+        <div id="chat">
+
+        </div>
+    </section>
     <section class="input">
-        <input type="text" name="message" placeholder="Send a message">
-        <button><i class="fas fa-paper-plane"></i></button>
+        <input type="text" name="message" placeholder="Send a message" id="textbox" oninput="checkForTextEntered()">
+        <button onclick="sendMessage()" id="send"><i class="fas fa-paper-plane"></i></button>
     </section>
     <footer>
         <p>ChatABC can make mistakes. Consider checking important information.</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
